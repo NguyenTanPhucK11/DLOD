@@ -25,6 +25,4 @@ class ActionHelloWorld(Action):
         hello = "hihi"
         
         dispatcher.utter_message(hello)
-        
-
         return []
