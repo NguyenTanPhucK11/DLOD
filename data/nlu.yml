@@ -80,3 +80,80 @@ nlu:
     - hello world
     - do you want hello world
 
+# Place Travel    
+
+- intent: placeTravel_shoppingMall
+  examples: |
+    - Tôi muốn tìm các trung tâm trương mại
+    - Tôi muốn tìm các trung tâm trương mại nổi tiếng
+    - Tôi muốn tìm những địa điểm mua sắm
+    - Cho tôi biết những trung tâm thương mại nổi tiếng ở sài gòn ?
+    - Cho tôi biết nơi mua sắm tốt ở sài gòn ?
+
+- intent: placeTravel_historyMuseum
+  examples: |
+    - Tôi muốn tìm các viện bảo tàng lịch sử
+    - Tôi muốn tìm các viện bảo tàng lịch sử nổi tiếng
+    - Tôi muốn xem những bức tranh thời chiến
+    - Tôi muốn đi tham quan bảo tàng chiến tranh
+
+- intent: placeTravel_specializedMuseum
+  examples: |
+    - Tôi muốn tìm các viện bảo tàng chuyên ngành
+    - Tôi muốn tìm các viện bảo tàng chuyên ngành nổi tiếng
+    - Tôi muốn tìm kiếm những di sản
+    - Tôi muốn xem những hiện vật mà khảo cổ học tìm ra
+
+- intent: placeTravel_artMuseum
+  examples: |
+    - Tôi muốn tìm những bảo tàng nghệ thuật
+    - Tôi muốn tìm những bảo tàng nghệ thuật nổi tiếng
+    - Tôi muốn chiêm ngưỡng những bức tranh nghệ thuật
+    - Tôi muốn tìm kiếm những tác phẩm hội hoạ
+    - Tôi muốn tìm kiếm những tác phẩm điêu khắc
+  
+- intent: placeTravel_market
+  examples: |
+    - Tôi muốn tìm những khu chợ
+    - Tôi muốn tìm những khu chợ nổi tiếng
+    - Tôi muốn tìm chợ có kiến trúc độc đáo
+
+- intent: placeTravel_park
+  examples: |
+    - Tôi muốn tìm những công viên
+    - Tôi muốn tìm những công viên nổi tiếng
+    - Tôi muốn tìm nơi vui chơi cho trẻ nhỏ
+    - Tôi muốn nơi yên tĩnh để đi bộ
+
+- intent: placeTravel_pool
+  examples: |
+    - Tôi muốn tìm hồ bơi 
+    - Tôi muốn tìm hồ bơi nổi tiếng
+    - Tôi muốn tìm nơi thoáng mát để nghỉ dưỡng
+
+- intent: placeTravel_church
+  examples: |
+    - Tôi muốn tìm nhà thờ 
+    - Tôi muốn tìm nhà thờ nổi tiếng
+    - Tôi muốn tìm nơi để đi lễ
+
+- intent: placeTravel_pagoda
+  examples: |
+    - Tôi muốn tìm những ngôi chùa 
+    - Tôi muốn tìm những ngôi chùa nổi tiếng
+    - Tôi muốn tìm nơi có các nhà sư
+    - Tôi muốn tìm nơi để cúng bái
+    - Tôi muốn tìm nơi để cầu chúc phúc
+    - Tôi muốn tìm nơi để cầu duyên
+    - Tôi muốn đi tu
+
+- intent: placeTravel_famousLandscapes
+  examples: |
+    - Tôi muốn tìm địa điểm danh lam thắng cảnh
+    - Tôi muốn tìm những nơi có view đẹp
+    - Tôi muốn tìm nơi thắng cảnh nổi tiếng
+    
+- intent: placeTravel_topTravelDestination
+    - Tôi muốn tìm địa điểm đẹp nhất Sài gòn
+    - Tôi muốn tìm địa điểm nổi bật nhất Sài gòn
+    - Tôi muốn tìm địa điểm du lịch hàng đầu
