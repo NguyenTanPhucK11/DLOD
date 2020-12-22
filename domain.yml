@@ -29,6 +29,40 @@ responses:
   utter_iamabot:
   - text: "Tôi là bot, được cung cấp bởi Rasa!"
 
+  utter_placeTravel_shoppingMall:
+  - text: ""
+
+  utter_placeTravel_historyMuseum:
+  - text: ""
+
+  utter_placeTravel_specializedMuseum:
+  - text: ""
+
+  utter_placeTravel_artMuseum:
+  - text: ""
+
+  utter_placeTravel_market:
+  - text: ""
+
+  utter_placeTravel_park:
+  - text: ""
+
+  utter_placeTravel_pool:
+  - text: ""
+
+  utter_placeTravel_church:
+  - text: ""
+
+  utter_placeTravel_pagoda:
+  - text: ""
+
+  utter_placeTravel_famousLandscapes:
+  - text: ""
+
+  utter_placeTravel_topTravelDestination:
+  - text: ""
+  
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
