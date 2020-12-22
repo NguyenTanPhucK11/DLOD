@@ -8,6 +8,18 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - helloworld
+  - placeTravel_shoppingMall
+  - placeTravel_historyMuseum
+  - placeTravel_specializedMuseum
+  - placeTravel_artMuseum
+  - placeTravel_market
+  - placeTravel_park
+  - placeTravel_pool
+  - placeTravel_church
+  - placeTravel_pagoda
+  - placeTravel_famousLandscapes
+  - placeTravel_topTravelDestination
 
 responses:
   utter_greet:
