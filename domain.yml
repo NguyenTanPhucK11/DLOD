@@ -30,37 +30,37 @@ responses:
   - text: "Tôi là bot, được cung cấp bởi Rasa!"
 
   utter_placeTravel_shoppingMall:
-  - text: ""
+  - text: "Dưới đây là những trung tâm thương mại nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_historyMuseum:
-  - text: ""
+  - text: "Dưới đây là những viện bảo tàng lịch sử nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_specializedMuseum:
-  - text: ""
+  - text: "Dưới đây là những viện bảo tàng chuyên ngành nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_artMuseum:
-  - text: ""
+  - text: "Dưới đây là những viện bảo tàng nghệ thuật nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_market:
-  - text: ""
+  - text: "Dưới đây là những khu chợ nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_park:
-  - text: ""
+  - text: "Dưới đây là những công viên nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_pool:
-  - text: ""
+  - text: "Dưới đây là những hồ bơi nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_church:
-  - text: ""
+  - text: "Dưới đây là những nhà thờ nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_pagoda:
-  - text: ""
+  - text: "Dưới đây là những ngôi chùa nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_famousLandscapes:
-  - text: ""
+  - text: "Dưới đây là những danh lam thắng cảnh nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_topTravelDestination:
-  - text: ""
+  - text: "Dưới đây là những địa điểm du dịch nổi bật nhất ở TP.Hồ Chí Minh"
   
 
 session_config:
