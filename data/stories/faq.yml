@@ -1,0 +1,33 @@
+version: "2.0"
+
+stories:
+
+- story: area
+  steps:
+  - intent: area
+  - action: utter_area
+
+- story: founding
+  steps:
+  - intent: founding
+  - action: utter_founding
+
+- story: resident
+  steps:
+  - intent: resident
+  - action: utter_resident
+
+- story: language
+  steps:
+  - intent: language
+  - action: utter_language
+
+- story: culture
+  steps:
+  - intent: culture
+  - action: utter_culture
+
+- story: vehicle
+  steps:
+  - intent: vehicle
+  - action: utter_vehicle

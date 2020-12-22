@@ -1,0 +1,40 @@
+version: "2.0"
+
+nlu:
+- intent: area
+  examples: |
+    - Cho tôi biết diện tích sài gòn? 
+    - Diện tích ?
+    - Diện tích sài gòn bao nhiêu ?
+
+- intent: founding
+  examples: |
+    - Thành lập ?
+    - Sài gòn thành lập năm bao nhiêu ?
+    - Sài gòn thành lập năm nào ?
+    - Cho tôi biết Sài gòn thành lập năm nào ?
+
+- intent: resident
+  examples: |
+    - Dân cư ?
+    - Dân cư Sài gòn nhiều không ?
+    - Cho tôi biết dân cư sài gòn ?
+
+- intent: language
+  examples: | 
+    - Ngôn ngữ ?
+    - Ngôn ngữ sử dụng phổ biến ở sài gòn ?
+    - Cho tôi biết ngôn ngữ Sài gòn ?
+
+- intent: culture
+  examples: |
+    - Văn hoá ?
+    - Văn hoá sài gòn có gì đặc biệt ?
+    - Tôi muốn biết văn hoá Sài gòn ?
+
+- intent: vehicle
+  examples: |
+    - Phương tiện ?
+    - Tôi có thể đến Sài gòn bằng cách nào ?
+    - Tôi có thể đi (xe máy)[vehicle] đến sài gòn không ?
+    - Làm cách nào để đến xài gòn ?

@@ -1,87 +1,6 @@
-
 version: "2.0"
 
 nlu:
-- intent: greet
-  examples: |
-    - chào bạn
-    - hey bạn
-    - đi thôi nào
-    - chào bạn
-    - chào buổi sáng
-    - chào buổi trưa
-    - chào buổi chiều
-
-- intent: goodbye
-  examples: |
-    - tạm biệt nhé
-    - tạm biệt
-    - hẹn gặp lại
-    - gặp lại sau nhé
-    - chúc một ngày tốt lành
-    - bye bye
-
-- intent: affirm
-  examples: |
-    - ok
-    - okey
-    - đồng ý
-    - yes
-    - y
-    - chấp nhận
-
-- intent: deny
-  examples: |
-    - không
-    - không được
-    - không bao giờ
-    - tôi không nghĩ thế
-    - tôi không thích điều đó
-    - không đời nào
-    - không thật sự chắc chắn
-
-- intent: mood_great
-  examples: |
-    - hoàn hảo
-    - tuyệt vời
-    - thật kinh ngạc
-    - tôi cảm thấy tuyệt vời
-    - tôi cảm thấy tốt
-    - tốt
-    - tôi sẽ cứu thế giới
-    - vô cùng tuyệt vời
-    - quá hoàn hảo
-    - quá tốt
-
-- intent: mood_unhappy
-  examples: |
-    - hôm nay là một ngày tồi tệ
-    - tôi buồn
-    - tôi cảm thấy không được tốt
-    - tôi cảm thấy thất vọng
-    - quá buồn
-    - tôi chán
-    - buồn
-    - rất buồn
-    - không vui
-    - không tốt
-    - không thật sự tốt
-    - vô cùng buồn
-
-- intent: bot_challenge
-  examples: |
-    - bạn có phải là bot ?
-    - bạn là người à ?
-    - tôi đang nói chuyện với bot ?
-    - tôi đang nói chuyện với người ?
-
-- intent: helloworld
-  examples: |
-    - hello world
-    - do you want hello world
-
-# Place Travel    
-
 - intent: placeTravel_shoppingMall
   examples: |
     - Trung tâm trương mại
@@ -162,12 +81,9 @@ nlu:
     - Tôi muốn tìm địa điểm danh lam thắng cảnh
     - Tôi muốn tìm những nơi có view đẹp
     - Tôi muốn tìm nơi thắng cảnh nổi tiếng
-    - View đẹp
-    - Tôi muốn tìm nơi có view đẹp
-    - Sống ảo
-    - Tôi muốn tìm nơi để sống ảo
-    - Selfie
-    - tôi muốn tìm nơi để selfie
+    - Tôi muốn tìm địa điểm có view đẹp
+    - Tôi muốn tìm địa điểm để sống ảo
+    - tôi muốn tìm địa điểm để selfie
     
 - intent: placeTravel_topTravelDestination
   examples: |
@@ -177,4 +93,3 @@ nlu:
     - Tôi muốn tìm địa điểm đẹp nhất Sài gòn
     - Tôi muốn tìm địa điểm nổi bật nhất Sài gòn
     - Tôi muốn tìm địa điểm du lịch hàng đầu
-   

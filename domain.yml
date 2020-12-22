@@ -9,6 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - helloworld
+# Place Travel
   - placeTravel_shoppingMall
   - placeTravel_historyMuseum
   - placeTravel_specializedMuseum
@@ -20,6 +21,21 @@ intents:
   - placeTravel_pagoda
   - placeTravel_famousLandscapes
   - placeTravel_topTravelDestination
+# sub
+  - event
+  - souvenir
+  - selfie
+  - prepareNecessary
+  - identification
+  - weather
+  - climate
+ # faq
+  - area
+  - founding
+  - resident
+  - language
+  - culture
+  - vehicle
 
 responses:
   utter_greet:
@@ -41,6 +57,8 @@ responses:
   utter_iamabot:
   - text: "Tôi là bot, được cung cấp bởi Rasa!"
 
+  # Place Travel
+
   utter_placeTravel_shoppingMall:
   - text: "Dưới đây là những trung tâm thương mại nổi tiếng ở TP.Hồ Chí Minh"
 
@@ -54,7 +72,7 @@ responses:
   - text: "Dưới đây là những viện bảo tàng nghệ thuật nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_market:
-  - text: "Dưới đây là những khu chợ nổi tiếng ở TP.Hồ Chí Minh"
+  - text: "Dưới đây là những khu chợ nổi tiếng ở TP.Hồ Chí Minh. Bạn có thể khám phá thêm ở link [sau đây](https://dulichkhampha24.com/cho-noi-tieng-sai-gon.html)."
 
   utter_placeTravel_park:
   - text: "Dưới đây là những công viên nổi tiếng ở TP.Hồ Chí Minh"
@@ -73,7 +91,50 @@ responses:
 
   utter_placeTravel_topTravelDestination:
   - text: "Dưới đây là những địa điểm du dịch nổi bật nhất ở TP.Hồ Chí Minh"
+
+  # sub
   
+  utter_event:
+  - text: "Sắp tới vào tháng 2 sẽ diễn ra lễ hội"
+
+  utter_souvenir:
+  - text: "Hiện tại TORORO là sản phẩm đang được bán chạy nhất. Bạn có thể xem thêm qua [link sau](https://top10tphcm.com/top-shop-qua-luu-niem-chat-luong-nhat-o-tphcm)"
+
+  utter_selfie:
+  - text: "Hiện tại các quán coffee đang là địa điểm ưa chuộng để chụp ảnh selfie của các bạn trẻ ghé thăm sài gòn. Bạn có thểm tham khảo thêm"
+
+  utter_prepareNecessary:
+  - text: "Gần đây thời tiết sài gòn khá lạnh nên giày, áo ấm và quần dài là sự chuẩn bị cần thiết cho bạn."
+
+  utter_identification:
+  - text: "Chứng minh là điều bắt buộc mà, khi bạn đi đâu cũng cần đến nó!"
+
+  utter_weather:
+  - text: "Dạo gần đây Sài gòn nắng gắt và có mưa vài nơi"
+
+  utter_climate:
+  - text: "Khí hậu sài gòn nóng ổn định từ 27-35 độ"
+
+  # faq
+
+  utter_area:
+  - text: "Thành phố Hồ Chí Minh hiện nay có diện tích rộng 2.095 km², lớn hơn gấp 30 lần so với đô thị Sài Gòn trước năm 1975 (67,5 km²)."
+
+  utter_founding:
+  - text: "Năm 1698, Nguyễn Hữu Cảnh cho lập huyện Tân Bình thuộc phủ Gia Định, đánh dấu sự ra đời thành phố."
+
+  utter_resident:
+  - text: "Tính tới đầu năm 2019 Sài gòn có 12,41 triệu dân cư, mật độ: 4.292 người/km²"
+
+  utter_language:
+  - text: "Sử dụng tiếng việt bình thường nhưng có chất giọng rất khác"
+
+  utter_culture:
+  - text: "Cảm nhận đầu tiên của hầu hết mọi du khách khi đến với Sài Gòn hẳn là không khí tấp nập, sự ồn ào, chen chúc nhau của dòng người đông đúc trên đường phố."
+
+  utter_vehicle:
+  - text: "Bạn có thể đến Sài gòn bằng rất nhiều phương tiện : Xe khách, máy bay, xe máy, tàu, ..."
+
 
 session_config:
   session_expiration_time: 60

@@ -1,0 +1,55 @@
+version: "2.0"
+
+nlu:
+- intent: event
+  examples: |
+    - Sự kiện
+    - Gần đây có sự kiện gì không ?
+    - Sài gòn có sự kiện gì đặc sắc ?
+    - Cho tôi biết những sự kiện nổi bật
+
+- intent: souvenir
+  examples: |
+    - Quà lưu niệm
+    - Tôi muốn mua quà về tặng người thân
+    - Tôi muốn mua quà lưu niệm
+    - Quà lưu niệm nào ở sài gòn được yêu thích
+    - Quà lưu niệm thường được mua
+    - Những món quà lưu niệm được ưa chuộng nhất
+
+- intent: selfie
+  examples: |
+    - Tôi muốn tìm nơi selfie
+    - Tôi muốn tìm những nơi view đẹp để chụp ảnh
+    - View chụp ảnh đẹp
+
+- intent: prepareNecessary
+  examples: |
+    - Tôi cần chuẩn bị gì trước khi đi
+    - Tôi nên mặc trang phục gì khi đi
+    - Tôi nên mang theo gì trước khi đi
+
+- intent: identification
+  examples: |        
+    - Tôi có cần mang theo chứng minh không ?
+    - Bắt buộc phải có những thứ gì khi lên sài gòn ?
+    - Những gì luôn phải có khi tới sài gòn ?
+
+- intent: weather
+  examples: |   
+    - Dạo này có mưa không ?
+    - Mưa hay nắng
+    - Thời tiết sài gòn mưa không ?
+    - Thời tiết sài gòn nắng không ?
+    - Cho tôi biết thời tiết sài gòn hiện tại ?
+    - Sài gòn có bão không ?
+    - Sài gòn có lụt không ? 
+
+- intent: climate
+  examples: |       
+    - Mát hay nóng ?   
+    - Khí hậu sài gòn mát không ?
+    - Khí hậu sài gòn nóng không ?
+    - Cho tôi biết khí hậu sài gòn hiện tại ?
+    - Sài gòn có lạnh không ?
+    - Sài gòn có nóng không ? 
