@@ -33,3 +33,58 @@ stories:
   steps:
   - intent: helloworld
   - action: action_hello_world
+
+- story: place travel shopping mall
+  steps:
+  - intent: placeTravel_shoppingMall
+  - action: utter_placeTravel_shoppingMall  
+
+- story: place travel history museum
+  steps:
+  - intent: placeTravel_historyMuseum
+  - action: utter_placeTravel_historyMuseum
+
+- story: place travel specialized Museum
+  steps:
+  - intent: placeTravel_specializedMuseum
+  - action: utter_placeTravel_specializedMuseum
+
+- story: place travel art museum
+  steps:
+  - intent: placeTravel_artMuseum
+  - action: utter_placeTravel_artMuseum
+
+- story: place travel market 
+  steps:
+  - intent: placeTravel_market
+  - action: utter_placeTravel_market
+
+- story: place travel park
+  steps:
+  - intent: placeTravel_park
+  - action: utter_placeTravel_park
+
+- story: place travel pool 
+  steps:
+  - intent: placeTravel_pool
+  - action: utter_placeTravel_pool
+
+- story: place travel church 
+  steps:
+  - intent: placeTravel_church
+  - action: utter_placeTravel_church
+
+- story: place travel pagoda 
+  steps:
+  - intent: placeTravel_pagoda
+  - action: utter_placeTravel_pagoda
+
+- story: place travel famous landscapes 
+  steps:
+  - intent: placeTravel_famousLandscapes
+  - action: utter_placeTravel_famousLandscapes
+
+- story: place travel topTravelDestination 
+  steps:
+  - intent: placeTravel_topTravelDestination
+  - action: utter_placeTravel_topTravelDestination
