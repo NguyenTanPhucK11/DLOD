@@ -35,15 +35,15 @@ nlu:
     - Bắt buộc phải có những thứ gì khi lên sài gòn ?
     - Những gì luôn phải có khi tới sài gòn ?
 
-- intent: weather
-  examples: |   
-    - Dạo này có mưa không ?
-    - Mưa hay nắng
-    - Thời tiết sài gòn mưa không ?
-    - Thời tiết sài gòn nắng không ?
-    - Cho tôi biết thời tiết sài gòn hiện tại ?
-    - Sài gòn có bão không ?
-    - Sài gòn có lụt không ? 
+# - intent: weather
+#   examples: |   
+#     - Dạo này có mưa không ?
+#     - Mưa hay nắng
+#     - Thời tiết sài gòn mưa không ?
+#     - Thời tiết sài gòn nắng không ?
+#     - Cho tôi biết thời tiết sài gòn hiện tại ?
+#     - Sài gòn có bão không ?
+#     - Sài gòn có lụt không ? 
 
 - intent: climate
   examples: |       
@@ -53,3 +53,4 @@ nlu:
     - Cho tôi biết khí hậu sài gòn hiện tại ?
     - Sài gòn có lạnh không ?
     - Sài gòn có nóng không ? 
+

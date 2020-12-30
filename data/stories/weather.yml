@@ -1,0 +1,28 @@
+version: "2.0"
+
+stories:
+
+
+- story: ask weather happy path
+  steps:
+  - intent: weather
+  - action: utter_ask_location
+  - intent: city
+    entities:
+    - location: Quận 7
+  - slot_was_set:
+    - location: Quận 7
+  - action: action_get_weather
+  - slot_was_set:
+    - location: null
+
+- story: ask weather with city happy path
+  steps:
+  - intent: weather_city
+    entities:
+    - location: Thủ Đức
+  - slot_was_set:
+    - location: Thủ Đức
+  - action: action_get_weather
+  - slot_was_set:
+    - location: null

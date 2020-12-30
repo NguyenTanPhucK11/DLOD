@@ -9,6 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - helloworld
+  - give_name
 # Place Travel
   - placeTravel_shoppingMall
   - placeTravel_historyMuseum
@@ -27,7 +28,6 @@ intents:
   - selfie
   - prepareNecessary
   - identification
-  - weather
   - climate
  # faq
   - area
@@ -36,6 +36,25 @@ intents:
   - language
   - culture
   - vehicle
+
+ # weather 
+  - weather
+  - weather_city
+  - city
+
+entities:
+  - location
+
+slots:
+ cust_sex:
+  auto_fill: true
+  type: text
+ cust_name:
+  auto_fill: true
+  type: text
+ location:
+  type: text
+  influence_conversation: true
 
 responses:
   utter_greet:
@@ -56,6 +75,9 @@ responses:
 
   utter_iamabot:
   - text: "Tôi là bot, được cung cấp bởi Rasa!"
+
+  utter_greet_with_name:
+  - text: "Kính chào {cust_sex} {cust_name}. Du Lịch Ở Đâu có thể giúp gì được cho bạn ạ?"
 
   # Place Travel
 
@@ -135,6 +157,9 @@ responses:
   utter_vehicle:
   - text: "Bạn có thể đến Sài gòn bằng rất nhiều phương tiện : Xe khách, máy bay, xe máy, tàu, ..."
 
+  # weather
+  utter_ask_location:
+  - text: "Thành phố nào ?"
 
 session_config:
   session_expiration_time: 60
@@ -142,3 +167,5 @@ session_config:
 
 actions: 
   - action_hello_world
+  - utter_greet_with_name
+  - action_get_weather

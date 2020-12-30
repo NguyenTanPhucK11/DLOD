@@ -11,6 +11,15 @@ nlu:
     - chào buổi trưa
     - chào buổi chiều
 
+- intent: give_name
+  examples: |
+    - [Anh](cust_sex) là [Thắng](cust_name)
+    - [Anh](cust_sex) là [Phúc](cust_name)
+    - [Chị](cust_sex) là [Hằng](cust_name)
+    - [Em](cust_sex) là [Trang](cust_name)
+    - [Cô](cust_sex) [Vân](cust_name)
+    - [Chú](cust_sex) [Hùng](cust_name)
+
 - intent: goodbye
   examples: |
     - tạm biệt nhé
@@ -73,6 +82,7 @@ nlu:
     - bạn là người à ?
     - tôi đang nói chuyện với bot ?
     - tôi đang nói chuyện với người ?
+
 
 - intent: helloworld
   examples: |

@@ -34,3 +34,8 @@ stories:
   - intent: helloworld
   - action: action_hello_world
 
+- story: give name
+  steps:
+  - intent: give_name
+  - action: utter_greet_with_name
+

@@ -37,12 +37,12 @@ stories:
   - intent: identification
   - action: utter_identification
 
-- story: weather
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: weather
-  - action: utter_weather
+# - story: weather
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: weather
+#   - action: utter_weather
 
 - story: climate
   steps:
