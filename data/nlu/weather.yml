@@ -4,9 +4,9 @@ nlu:
 
 - intent: weather
   examples: |
+    - thời tiết
     - nói cho tôi biết thời tiết
     - tôi muốn biết thời tiết
-    - thời tiết
     - thời tiết hôm nay thế nào
     - thời tiết hiện tại thế nào
     - Tôi muốn biết nhiệt độ
@@ -16,6 +16,7 @@ nlu:
     - nói cho tôi biết thời tiết [Quận 7](location)
     - tôi muốn biết thời tiết tại [Thủ Đức](location)
     - thời tiết của [thành phố Hồ Chí Minh](location) 
+    - thời tiết của [Hồ Chí Minh](location) 
     - thời tiết hôm nay tại [Quận 5](location) thế nào
     - nhiệt độ tại [Quận 6](location) hiện tại
     - tôi muốn biết nhiệt độ tại [Binh Tan](location)
@@ -23,10 +24,18 @@ nlu:
 - intent: city
   examples: |
     - [Binh Tan](location)
-    - [Quận 7](location)
-    - [Quận 6](location)
-    - [Quận 5](location)
+    - [Quận 1](location)
+    - [Quận 2](location)
+    - [Quận 3](location)
     - [Quận 4](location)
-    - [Quận 12](location)
+    - [Quận 5](location)
+    - [Quận 6](location)
+    - [Quận 7](location)
+    - [Quận 8](location)
+    - [Quận 9](location)
+    - [Quận 10](location)
+    - [Quận 11](location)
+    - [Quận 11](location)
     - [Thủ Đức](location)
     - [Ho Chi Minh](location)
+    - [Hồ Chí Minh](location)

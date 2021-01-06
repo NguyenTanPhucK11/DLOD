@@ -29,11 +29,11 @@ class ActionGetWeather(Action):
         payload = {"q": city, "appid": api_token, "units": "metric", "lang": "vi"}
         response = requests.get(url, params=payload)
         if response.ok:
-            # description = response.json()["weather"][0]["description"]
+            description = response.json()["weather"][0]["description"]
             temp = round(response.json()["main"]["temp"])
             cityGR = response.json()["name"]
 
-            msg = f"Nhiệt độ hiện tại tại {cityGR} là {temp} độ C"
+            msg = f"Nhiệt độ hiện tại tại {cityGR} là {temp} độ C và {description}"
         else:
             msg= "Lỗi!"
 
