@@ -29,6 +29,7 @@ intents:
   - prepareNecessary
   - identification
   - climate
+  - api
  # faq
   - area
   - founding
@@ -83,9 +84,21 @@ responses:
 
   utter_placeTravel_shoppingMall:
   - text: "Dưới đây là những trung tâm thương mại nổi tiếng ở TP.Hồ Chí Minh"
+    buttons:
+    - title: "SC VivoCity"
+      payload: '/bot_functions'
+    - title: "Crescent Mall"
+      payload: '/bot_functions'
+    - title: "Sunrise Plaza"
+      payload: '/bot_functions'
 
   utter_placeTravel_historyMuseum:
-  - text: "Dưới đây là những viện bảo tàng lịch sử nổi tiếng ở TP.Hồ Chí Minh"
+  # - text: "Dưới đây là những viện bảo tàng lịch sử nổi tiếng ở TP.Hồ Chí Minh"
+  - text: “Click here to open the website” 
+    buttons:
+    - title: “Click me” 
+      payload: ‘http://website.com’
+  
 
   utter_placeTravel_specializedMuseum:
   - text: "Dưới đây là những viện bảo tàng chuyên ngành nổi tiếng ở TP.Hồ Chí Minh"
@@ -169,3 +182,4 @@ actions:
   - action_hello_world
   - utter_greet_with_name
   - action_get_weather
+  - action_api

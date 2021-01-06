@@ -50,3 +50,10 @@ stories:
   - action: utter_greet
   - intent: climate
   - action: utter_climate
+
+- story: api 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: api
+  - action: action_api

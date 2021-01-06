@@ -15,22 +15,8 @@ from rasa_sdk.events import SlotSet
 import requests
 
 
-class ActionHelloWorld(Action):
-
-    def name(self) -> Text:
-        return "action_hello_world"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-        hello = "hihi"
-        
-        dispatcher.utter_message(hello)
-        return []
-
-
 class ActionGetWeather(Action):
+    """ Return today's weather forecast"""
 
     def name(self):
         return "action_get_weather"
@@ -39,19 +25,35 @@ class ActionGetWeather(Action):
 
         city = tracker.get_slot('location')
         api_token = "417d2d3d5443b9068b0580a5e3414961"
-        url = "api.openweathermap.org/data/2.5/weather"
+        url = "https://api.openweathermap.org/data/2.5/weather"
         payload = {"q": city, "appid": api_token, "units": "metric", "lang": "vi"}
         response = requests.get(url, params=payload)
         if response.ok:
-            description = response.json()["weather"][0]["description"]
+            # description = response.json()["weather"][0]["description"]
             temp = round(response.json()["main"]["temp"])
             cityGR = response.json()["name"]
 
-            msg = f"Nhiệt độ hiện tại của {cityGR} là {temp} độ C. Dự báo hôm nay trời sẽ {description}"
+            msg = f"Nhiệt độ hiện tại tại {cityGR} là {temp} độ C"
         else:
-            msg= "Xin vui lòng nhập lại, đã xảy ra lỗi với thành phố được yêu cầu."
+            msg= "Lỗi!"
 
         dispatcher.utter_message(msg)
         return [SlotSet("location", None)]
+
+class ActionTest(Action):
+    
+    def name(self):
+        return "action_api"
+
+    def run(self, dispatcher, tracker, domain):
+        response = requests.get("https://jsonplaceholder.typicode.com/todos/1")
+        jsonResponse = response.json()
+        title = jsonResponse["title"]
+        id = jsonResponse["id"]
+
+        messageToUser = "id là \"{}\" và title là \"{}\"".format(id, title)
+        dispatcher.utter_message(messageToUser)
+
+        return []
 
     

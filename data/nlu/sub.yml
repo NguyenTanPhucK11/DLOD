@@ -54,3 +54,10 @@ nlu:
     - Sài gòn có lạnh không ?
     - Sài gòn có nóng không ? 
 
+- intent: api
+  examples: |
+    - đây là api à ?
+    - api phải không? 
+    - tôi có thể test api này không ?
+    - api này có gì ?
+
