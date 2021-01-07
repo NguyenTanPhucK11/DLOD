@@ -65,12 +65,12 @@ stories:
   - intent: placeTravel_pagoda
   - action: utter_placeTravel_pagoda
 
-- story: place travel famous landscapes 
+- story: place travel beauty spot
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: placeTravel_famousLandscapes
-  - action: utter_placeTravel_famousLandscapes
+  - intent: placeTravel_beautySpot
+  - action: utter_placeTravel_beautySpot
 
 - story: place travel topTravelDestination 
   steps:

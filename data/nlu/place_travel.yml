@@ -66,6 +66,7 @@ nlu:
 
 - intent: placeTravel_pagoda
   examples: |
+    - Chùa
     - Ngôi chùa 
     - Tôi muốn tìm những ngôi chùa 
     - Tôi muốn tìm những ngôi chùa nổi tiếng
@@ -75,7 +76,7 @@ nlu:
     - Tôi muốn tìm nơi để cầu duyên
     - Tôi muốn đi tu
 
-- intent: placeTravel_famousLandscapes
+- intent: placeTravel_beautySpot
   examples: |
     - Danh lam thắng cảnh
     - Tôi muốn tìm địa điểm danh lam thắng cảnh

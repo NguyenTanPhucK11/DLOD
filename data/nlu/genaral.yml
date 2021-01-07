@@ -3,7 +3,7 @@ version: "2.0"
 nlu:
 - intent: greet
   examples: |
-    - chào bạn
+    - chào
     - hey bạn
     - đi thôi nào
     - chào bạn

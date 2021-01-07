@@ -20,7 +20,7 @@ intents:
   - placeTravel_pool
   - placeTravel_church
   - placeTravel_pagoda
-  - placeTravel_famousLandscapes
+  - placeTravel_beautySpot
   - placeTravel_topTravelDestination
 # sub
   - event
@@ -45,6 +45,8 @@ intents:
 
 entities:
   - location
+  - name
+  - surname
 
 slots:
  cust_sex:
@@ -56,10 +58,14 @@ slots:
  location:
   type: text
   influence_conversation: true
+ name:
+  type: text
+ surname:
+  type: text
 
 responses:
   utter_greet:
-  - text: "Chào, bạn có khoẻ không"
+  - text: "Xin chào {surname} {name}"
 
   utter_cheer_up:
   - text: "Có một thứ giúp bạn phấn chấn hơn"
@@ -121,7 +127,7 @@ responses:
   utter_placeTravel_pagoda:
   - text: "Dưới đây là những ngôi chùa nổi tiếng ở TP.Hồ Chí Minh"
 
-  utter_placeTravel_famousLandscapes:
+  utter_placeTravel_beautySpot:
   - text: "Dưới đây là những danh lam thắng cảnh nổi tiếng ở TP.Hồ Chí Minh"
 
   utter_placeTravel_topTravelDestination:
@@ -183,3 +189,4 @@ actions:
   - utter_greet_with_name
   - action_get_weather
   - action_api
+  - action_name

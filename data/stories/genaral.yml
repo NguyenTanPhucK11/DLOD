@@ -39,3 +39,9 @@ stories:
   - intent: give_name
   - action: utter_greet_with_name
 
+- story: greet path 2
+  steps:
+  - action: action_name
+  - slot_was_set:
+    - name: Phúc
+  - action: utter_greet
