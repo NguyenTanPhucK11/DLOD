@@ -88,6 +88,7 @@ nlu:
     
 - intent: placeTravel_topTravelDestination
   examples: |
+    - Địa chỉ du lịch
     - Tìm địa điểm nổi tiếng
     - Tôi muốn tìm địa điểm nổi tiếng
     - Tìm địa điểm

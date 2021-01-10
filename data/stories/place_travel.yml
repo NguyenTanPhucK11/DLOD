@@ -77,4 +77,11 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: placeTravel_topTravelDestination
-  - action: utter_placeTravel_topTravelDestination
+  - action: action_api
+
+# - story: api 
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: placeTravel_topTravelDestination
+#   - action: action_api

@@ -55,5 +55,5 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: api
+  - intent: placeTravel_topTravelDestination
   - action: action_api

@@ -33,7 +33,7 @@ class ActionGetWeather(Action):
             temp = round(response.json()["main"]["temp"])
             cityGR = response.json()["name"]
 
-            msg = f"Nhiệt độ hiện tại tại {city} là {temp} độ C và {description}"
+            msg = f"Nhiệt độ tại {city} hiện tại là {temp} độ C và {description}"
         else:
             msg= "Lỗi!"
 
@@ -53,33 +53,92 @@ class GetName(Action):
         last_name = r['last_name']
         print(first_name)
         return [SlotSet('name', first_name), SlotSet('surname', last_name)]
-class ActionTest(Action):
-    
+
+# class ActionPlaceTravel(Action):
+#     # ⭑⭒
+#     def name(self):
+#         return "action_api"
+  
+#     def run(self, dispatcher, tracker, domain):
+#         def star(star):
+#             temp = int(star) // 3
+#             a = '' 
+#             b = ''
+#             for x in range(temp):
+#                 a = a + '⭑'
+#             for x in range(5 - temp):
+#                 b = b + '⭒'
+#             # while(temp < 5):
+#             #     b = b + '⭒'
+#             #     temp = temp + 1
+#             return a + b
+#         response = requests.get("http://127.0.0.1:3000/place-travels")
+#         jsonResponse = response.json()
+#         for index, value in enumerate(jsonResponse):
+#             name = value["name"]
+#             type = value["type"]
+#             review = value["review"]
+#             messageToUser = "{}. {}\n Thể loại: {} \n Đánh giá: {} \n Review: {}\n".format(index +1 ,name, type, star(value["id"]), review)
+#             dispatcher.utter_message(messageToUser)
+
+#         return []
+
+class ActionMessengerTemplate(Action):
     def name(self):
         return "action_api"
-
     def run(self, dispatcher, tracker, domain):
-        response = requests.get("http://192.168.100.44:3000/place-travels")
+        def star(star):
+            temp = int(star) // 3
+            a = '' 
+            b = ''
+            for x in range(temp):
+                a = a + '⭑'
+            for x in range(5 - temp):
+                b = b + '⭒'
+            # while(temp < 5):
+            #     b = b + '⭒'
+            #     temp = temp + 1
+            return a + b
+        response = requests.get("http://127.0.0.1:3000/place-travels")
         jsonResponse = response.json()
-        # print(jsonResponse)
-        # listPlaceTravel = map(lambda item: item.name, jsonResponse)
-        
-        # print(listPlaceTravel)
-        # print(list(listPlaceTravel))
-        # json_string = json.dumps(jsonResponse)
-        # print(json_string)
-        # test_list = [1, 4, 5, 6, 7]
         for index, value in enumerate(jsonResponse):
             name = value["name"]
             type = value["type"]
             review = value["review"]
-            messageToUser = "{}. {} \n {} \n ⭐⭐⭐⭐{}\n".format(index +1 ,name, type, review)
-            dispatcher.utter_message(messageToUser)
-        # title = jsonResponse[0]["name"]
-        # id = jsonResponse[0]["id"]
-
-        # messageToUser = "id2 là \"{}\" và title là \"{}\"".format(id, title)
-        # dispatcher.utter_message(messageToUser)
-
+            gt = {
+            "attachment": {
+                "type": "template",
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [
+                        {
+                            "title": "{}. {}".format(index+1,name),
+                            "image_url": "https://picsum.photos/200",
+                            "subtitle": "Loại địa điểm: {}\nReview: {}\nĐánh giá: {}".format(type, review, star(value["id"])),
+                            "default_action": {
+                                "type": "web_url",
+                                "url": "https://tithal.life",
+                                "webview_height_ratio": "tall",
+                            },
+                            "buttons": [
+                                {
+                                    "type": "web_url",
+                                    "url": "https://tithal.life",
+                                    "title": "Chi tiết"
+                                },
+                                {
+                                    "type": "postback",
+                                    "title": "Chỉ đường",
+                                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                                }
+                            ]
+                        },
+                    ]
+                }
+                }
+            }
+            dispatcher.utter_custom_json(gt)
+            # messageToUser = "{}. {}\n Thể loại: {} \n Đánh giá: {} \n Review: {}\n".format(index +1 ,name, type, star(value["id"]), review)
+            # dispatcher.utter_message(messageToUser)
+       
         return []
-    

@@ -65,7 +65,26 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Xin chào {surname} {name}"
+  # - text: "Xin chào, tôi có thể giúp gì cho bạn"
+  # - text: "Xin chào {surname} {name}"
+  "payload": {
+  "template_type":"generic",
+  "elements":[
+     {
+      "title":"<TITLE_TEXT>",
+      "image_url":"<IMAGE_URL_TO_DISPLAY>",
+      "subtitle":"<SUBTITLE_TEXT>",
+      "default_action": {
+        "type": "web_url",
+        "url": "<DEFAULT_URL_TO_OPEN>",
+        "messenger_extensions": <TRUE | FALSE>,
+        "webview_height_ratio": "<COMPACT | TALL | FULL>"
+      },
+      "buttons":[<BUTTON_OBJECT>, ...]      
+    },
+    ...
+  ]
+}
 
   utter_cheer_up:
   - text: "Có một thứ giúp bạn phấn chấn hơn"
@@ -178,7 +197,7 @@ responses:
 
   # weather
   utter_ask_location:
-  - text: "Thành phố nào ?"
+  - text: "Quận nào ?"
 
 session_config:
   session_expiration_time: 60
