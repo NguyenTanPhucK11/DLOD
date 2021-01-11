@@ -65,26 +65,8 @@ slots:
 
 responses:
   utter_greet:
-  # - text: "Xin chào, tôi có thể giúp gì cho bạn"
+  - text: "Xin chào, tôi có thể giúp gì cho bạn"
   # - text: "Xin chào {surname} {name}"
-  "payload": {
-  "template_type":"generic",
-  "elements":[
-     {
-      "title":"<TITLE_TEXT>",
-      "image_url":"<IMAGE_URL_TO_DISPLAY>",
-      "subtitle":"<SUBTITLE_TEXT>",
-      "default_action": {
-        "type": "web_url",
-        "url": "<DEFAULT_URL_TO_OPEN>",
-        "messenger_extensions": <TRUE | FALSE>,
-        "webview_height_ratio": "<COMPACT | TALL | FULL>"
-      },
-      "buttons":[<BUTTON_OBJECT>, ...]      
-    },
-    ...
-  ]
-}
 
   utter_cheer_up:
   - text: "Có một thứ giúp bạn phấn chấn hơn"
@@ -209,3 +191,4 @@ actions:
   - action_get_weather
   - action_api
   - action_name
+  - action_transport

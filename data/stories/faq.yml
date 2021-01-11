@@ -30,4 +30,4 @@ stories:
 - story: vehicle
   steps:
   - intent: vehicle
-  - action: utter_vehicle
+  - action: action_transport

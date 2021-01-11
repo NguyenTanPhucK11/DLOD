@@ -142,3 +142,31 @@ class ActionMessengerTemplate(Action):
             # dispatcher.utter_message(messageToUser)
        
         return []
+    
+class ActionTransport(Action):
+    def name(self):
+        return "action_transport"
+    def run(self, dispatcher, tracker, domain):
+        transport = {
+            "text": "Có 3 loại phương tiện phổ biến:\nBạn muốn di chuyến bằng phương tiện nào ?",
+            "quick_replies":[
+            {
+                "content_type":"text",
+                "title":"Máy bay",
+                "payload":"<POSTBACK_PAYLOAD>",
+                # "image_url":"http://example.com/img/red.png"
+            },{
+                "content_type":"text",
+                "title":"Tàu hoả",
+                "payload":"<POSTBACK_PAYLOAD>",
+                # "image_url":"http://example.com/img/green.png"
+            },{
+                "content_type":"text",
+                "title":"Xe khách",
+                "payload":"<POSTBACK_PAYLOAD>",
+                # "image_url":"http://example.com/img/green.png"
+            }
+            ]
+        }
+        dispatcher.utter_custom_json(transport)
+        return []     
