@@ -20,7 +20,11 @@ nlu:
     - thời tiết hôm nay tại [Quận 5](location) thế nào
     - nhiệt độ tại [Quận 6](location) hiện tại
     - tôi muốn biết nhiệt độ tại [Binh Tan](location)
-
+- intent: weather_city_forecasts
+  examples: |
+    - nhiệt độ ngày mai
+    - ngày mai thời tiết ra sao
+    - thời tiết ngày mai
 - intent: city
   examples: |
     - [Binh Tan](location)

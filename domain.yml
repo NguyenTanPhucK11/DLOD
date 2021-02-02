@@ -43,11 +43,22 @@ intents:
   - weather_city
   - city
 
+ # location
+  - coordinates
+ # hotels
+  - hotels
+
+
 entities:
   - location
   - name
   - surname
-
+  - type
+  - number
+  - star
+  - min
+  - max
+  
 slots:
  cust_sex:
   auto_fill: true
@@ -62,10 +73,20 @@ slots:
   type: text
  surname:
   type: text
+ type:
+  type: text
+ number:
+  type: text
+ star:
+  type: text
+ min:
+  type: text
+ max: 
+  type: text
 
 responses:
   utter_greet:
-  - text: "Xin chào, tôi có thể giúp gì cho bạn"
+  - text: "Chào mừng bạn đến với Check in Sài Gòn, mình có thể giúp gì được cho bạn ?"
   # - text: "Xin chào {surname} {name}"
 
   utter_cheer_up:
@@ -179,7 +200,7 @@ responses:
 
   # weather
   utter_ask_location:
-  - text: "Quận nào ?"
+  - text: "Bạn muốn biết tại quận nào ?"
 
 session_config:
   session_expiration_time: 60
@@ -192,3 +213,6 @@ actions:
   - action_api
   - action_name
   - action_transport
+  - action_coordinates
+  - action_hotels
+  - action_get_weather_forecasts

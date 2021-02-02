@@ -1,0 +1,18 @@
+version: "2.0"
+
+nlu:
+- intent: hotels
+  examples: |
+    - khách sạn
+    - khách sạn gần đây
+    - cho tôi biết khách sạn gần nhất
+    - tôi muốn tìm khách sạn gần nhất
+    - tôi muốn biết [7](number) khách sạn tốt nhất
+    - [5](number) khách sạn nổi bật
+    - top khách sạn hạng sang
+    - top [3](number) khách sạn nổi tiếng
+    - tôi muốn biết khách sạn [5](star) sao tốt nhất
+    - khách sạn [3](star) sao
+    - khách sạn [3](star) sao tốt nhất
+    - khách sạn [4](star) sao rẻ nhất
+    - top khách sạn [2](star) sao

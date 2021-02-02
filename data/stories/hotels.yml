@@ -1,0 +1,14 @@
+version: "2.0"
+
+stories:
+
+- story: hotels & homestays
+  steps:
+  - intent: hotels
+    entities:
+    - star: 3
+  - slot_was_set:
+    - star: 5
+  - action: action_hotels
+  - slot_was_set:
+    - star: null

@@ -1,0 +1,9 @@
+version: "2.0"
+
+nlu:
+- intent: coordinates
+  examples: |
+    - tôi đang ở đâu
+    - vị trí hiện tại
+    - vị trí
+    - toạ độ

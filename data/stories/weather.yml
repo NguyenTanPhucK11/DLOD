@@ -26,3 +26,8 @@ stories:
   - action: action_get_weather
   - slot_was_set:
     - location: null
+
+- story: ask weather forecasts with city
+  steps:
+  - intent: weather_city_forecasts
+  - action: action_get_weather_forecasts

@@ -3,28 +3,28 @@ version: "2.0"
 nlu:
 - intent: placeTravel_shoppingMall
   examples: |
-    - Trung tâm trương mại
-    - Tôi muốn tìm các trung tâm trương mại
-    - Tôi muốn tìm các trung tâm trương mại nổi tiếng
-    - Tôi muốn tìm những địa điểm mua sắm
-    - Cho tôi biết những trung tâm thương mại nổi tiếng ở sài gòn ?
-    - Cho tôi biết nơi mua sắm tốt ở sài gòn ?
+    - [Trung tâm trương mại] (type)
+    - Tôi muốn tìm các [trung tâm trương mại](type)
+    - Tôi muốn tìm các [trung tâm trương mại](type) nổi tiếng
+    - Tôi muốn tìm những [địa điểm mua sắm](type)
+    - Cho tôi biết những [trung tâm thương mại](type) nổi tiếng ở sài gòn ?
+    - Cho tôi biết nơi [mua sắm](type) tốt ở sài gòn ?
 
 - intent: placeTravel_historyMuseum
   examples: |
     - Bảo tàng lịch sử
-    - Tôi muốn tìm các viện bảo tàng lịch sử
-    - Tôi muốn tìm các viện bảo tàng lịch sử nổi tiếng
+    - Tôi muốn tìm các [viện bảo tàng lịch sử](type)
+    - Tôi muốn tìm các [viện bảo tàng lịch sử](type) nổi tiếng
     - Tôi muốn xem những bức tranh thời chiến
     - Tôi muốn đi tham quan bảo tàng chiến tranh
 
 - intent: placeTravel_specializedMuseum
   examples: |
-    - Bảo tàng chuyên ngành
-    - Tôi muốn tìm các viện bảo tàng chuyên ngành
-    - Tôi muốn tìm các viện bảo tàng chuyên ngành nổi tiếng
-    - Tôi muốn tìm kiếm những di sản
-    - Tôi muốn xem những hiện vật mà khảo cổ học tìm ra
+    - [Bảo tàng chuyên ngành](type)
+    - Tôi muốn tìm các [viện bảo tàng chuyên ngành](type)
+    - Tôi muốn tìm các [viện bảo tàng chuyên ngành](type) nổi tiếng
+    - Tôi muốn tìm kiếm những [di sản](type)
+    - Tôi muốn xem những hiện vật mà [khảo cổ học](type) tìm ra
 
 - intent: placeTravel_artMuseum
   examples: |
@@ -60,15 +60,15 @@ nlu:
 - intent: placeTravel_church
   examples: |
     - Nhà thờ 
-    - Tôi muốn tìm nhà thờ 
-    - Tôi muốn tìm nhà thờ nổi tiếng
+    - Tôi muốn tìm [nhà thờ](type)
+    - Tôi muốn tìm [nhà thờ](type) nổi tiếng
     - Tôi muốn tìm nơi để đi lễ
 
 - intent: placeTravel_pagoda
   examples: |
     - Chùa
     - Ngôi chùa 
-    - Tôi muốn tìm những ngôi chùa 
+    - Tôi muốn tìm những [ngôi chùa](type)
     - Tôi muốn tìm những ngôi chùa nổi tiếng
     - Tôi muốn tìm nơi có các nhà sư
     - Tôi muốn tìm nơi để cúng bái
@@ -88,10 +88,24 @@ nlu:
     
 - intent: placeTravel_topTravelDestination
   examples: |
+    - top du lịch
+    - du lịch
+    - top [10](number) địa chỉ nổi tiếng
+    - top [1](number) địa chỉ nổi tiếng
+    - top [3](number) địa chỉ nổi tiếng
+    - top [7](number) địa chỉ nổi tiếng
     - Địa chỉ du lịch
     - Tìm địa điểm nổi tiếng
     - Tôi muốn tìm địa điểm nổi tiếng
     - Tìm địa điểm
+    - Tôi muốn biết những địa điểm du lịch nổi tiếng của TP. Hồ Chí Minh
+    - Tôi muốn biết những địa điểm du lịch nổi tiếng của Sài Gòn
     - Tôi muốn tìm địa điểm đẹp nhất Sài gòn
     - Tôi muốn tìm địa điểm nổi bật nhất Sài gòn
     - Tôi muốn tìm địa điểm du lịch hàng đầu
+    - top du lịch hồ chí minh
+    - địa điểm du lịch nổi tiếng nhất hồ chí minh
+    - tôi muốn đi chơi
+    - ở sài gòn nên đi chỗ nào
+    - hãy chỉ cho tui 1 chỗ vui vui
+
