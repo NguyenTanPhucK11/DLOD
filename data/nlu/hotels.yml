@@ -4,6 +4,11 @@ nlu:
 - intent: hotels
   examples: |
     - khách sạn
+    - khach san
+    - khacgj sanj
+    - Khach san
+    - Top khách sạn
+    - khách sạn nổi bật
     - khách sạn gần đây
     - cho tôi biết khách sạn gần nhất
     - tôi muốn tìm khách sạn gần nhất
@@ -11,8 +16,86 @@ nlu:
     - [5](number) khách sạn nổi bật
     - top khách sạn hạng sang
     - top [3](number) khách sạn nổi tiếng
+- intent: hotels_star
+  examples: |
     - tôi muốn biết khách sạn [5](star) sao tốt nhất
     - khách sạn [3](star) sao
     - khách sạn [3](star) sao tốt nhất
-    - khách sạn [4](star) sao rẻ nhất
     - top khách sạn [2](star) sao
+    - top khach san [4](star) sao
+- intent: hotels_min
+  examples: |
+    - khách sạn [rẻ nhất](min)
+    - khach san [rẻ nhất](min)
+    - top khách sạn [giá rẻ](min)
+    - khách sạn [4](star) sao [rẻ nhất](min)
+- intent: hotels_max
+  examples: |
+    - khách sạn [3](star) sao [mắc nhất](max)
+    - khach san [3](star) sao [mắc nhất](max)
+    - khách sạn [giá mắc nhất](max)
+    - top khách sạn [giá mắc](max)
+    - khách sạn [3](star) sao [cao nhất](max)
+    - khách sạn [giá cao nhất](max)
+    - top khách sạn [giá cao](max)
+
+- intent: hotels_min_price
+  examples: |
+    - khách sạn dưới [1000000](price)
+    - khách sạn không quá [2000000](price)
+    - khách sạn tầm [500000](price)
+
+- intent: hotels_max_price
+  examples: |
+    - khách sạn trên [1000000](price)
+    - khách sạn cao hơn [500000](price)
+    - khách sạn hơn [200000](price)
+    - khách sạn nhiều hơn [300000](price)
+
+- intent: hotels_find_district
+  examples: |
+    - ks [quận 7](district)
+    - khách sạn [quận 5](district)
+    - tìm những ks [quận thủ đức](district)
+    - tìm ks [quận 8](district)
+    - khách sạn gần [quận 6](district)
+    - cho tôi biết những khách sạn [quận 7](district)
+    - ks [q7](district)
+    - ks [q1](district)
+    - ks [q2](district)
+    - ks [q3](district)
+    - ks [q4](district)
+    - ks [q5](district)
+    - ks [q6](district)
+    - ks [q7](district)
+    - ks [q8](district)
+    - ks [q9](district)
+    - ks [q10](district)
+    - ks [q11](district)
+    - ks [q12](district)
+    - khách sạn [q1](district)
+    - khách sạn [q2](district)
+    - khách sạn [q3](district)
+    - khách sạn [q4](district)
+    - khách sạn [q10](district)
+    - khách sạn [q11](district)
+    - khách sạn [q12](district)
+    - tìm những ks [thủ đức](district)
+    - tìm ks [Q8](district)
+    - khách sạn gần [Q6](district)
+    - cho tôi biết những khách sạn [Quận 7](district)
+    - ks [quận 1](district)
+    - khách sạn [quận 1](district)
+    - tìm những ks [quận thủ đức](district)
+    - tìm ks [quận 1](district)
+    - khách sạn gần [quận 1](district)
+    - tìm những ks [thủ đức](district)
+    - tìm ks [thủ đức](district)
+    - khách sạn gần [thủ đức](district)
+    - cho tôi biết những khách sạn [quận 1](district)
+    - ks [q1](district)
+    - khách sạn [q1](district)
+    - tìm những ks [thủ đức](district)
+    - tìm ks [Q2](district)
+    - khách sạn gần [Q3](district)
+    - cho tôi biết những khách sạn [Quận 1](district)

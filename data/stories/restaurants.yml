@@ -1,0 +1,32 @@
+version: "2.0"
+
+stories:
+
+- story: restaurants
+  steps:
+  - intent: greet
+  - action: action_hello
+  - intent: restaurants
+  - action: action_restaurants
+
+- story: restaurants type
+  steps:
+  - intent: restaurants_type
+    entities:
+    - type_res: "lẩu"
+  - slot_was_set:
+    - type_res: "phở"  
+  - action: action_restaurants_type
+  - slot_was_set:
+    - type_res: null
+
+- story: restaurants district
+  steps:
+  - intent: restaurants_type
+    entities:
+    - res_district: "quận 4"
+  - slot_was_set:
+    - res_district: "q8"  
+  - action: action_restaurants_district
+  - slot_was_set:
+    - res_district: null

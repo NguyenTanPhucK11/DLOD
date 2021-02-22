@@ -31,3 +31,14 @@ stories:
   steps:
   - intent: weather_city_forecasts
   - action: action_get_weather_forecasts
+
+- story: ask weather with day
+  steps:
+  - intent: weather_city_forecasts_day
+    entities:
+    - num_forecasts_day: 3
+  - slot_was_set:
+    - num_forecasts_day: 7
+  - action: action_get_weather_forecasts_day
+  - slot_was_set:
+    - num_forecasts_day: null

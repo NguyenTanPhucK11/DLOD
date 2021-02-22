@@ -5,14 +5,14 @@ stories:
 - story: happy path
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_hello
   - intent: mood_great
-  - action: utter_happy
+  - action: action_hello
 
 - story: sad path 1
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_hello
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -22,7 +22,7 @@ stories:
 - story: sad path 2
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_hello
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -34,14 +34,13 @@ stories:
   - intent: helloworld
   - action: action_hello_world
 
-- story: give name
+- story: choose type
   steps:
-  - intent: give_name
-  - action: utter_greet_with_name
-
-- story: greet path 2
-  steps:
-  - action: action_name
-  - slot_was_set:
-    - name: Phúc
-  - action: utter_greet
+  - intent: choose_type
+  - action: action_choose_type
+# - story: greet path 2
+#   steps:
+#   - action: action_name
+#   - slot_was_set:
+#     - name: Phúc
+#   - action: utter_greet

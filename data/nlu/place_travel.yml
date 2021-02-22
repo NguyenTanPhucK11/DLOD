@@ -1,18 +1,11 @@
 version: "2.0"
 
 nlu:
-- intent: placeTravel_shoppingMall
-  examples: |
-    - [Trung tâm trương mại] (type)
-    - Tôi muốn tìm các [trung tâm trương mại](type)
-    - Tôi muốn tìm các [trung tâm trương mại](type) nổi tiếng
-    - Tôi muốn tìm những [địa điểm mua sắm](type)
-    - Cho tôi biết những [trung tâm thương mại](type) nổi tiếng ở sài gòn ?
-    - Cho tôi biết nơi [mua sắm](type) tốt ở sài gòn ?
 
 - intent: placeTravel_historyMuseum
   examples: |
     - Bảo tàng lịch sử
+    - bao tang lich su
     - Tôi muốn tìm các [viện bảo tàng lịch sử](type)
     - Tôi muốn tìm các [viện bảo tàng lịch sử](type) nổi tiếng
     - Tôi muốn xem những bức tranh thời chiến
@@ -42,49 +35,12 @@ nlu:
     - Tôi muốn tìm những khu chợ nổi tiếng
     - Tôi muốn tìm chợ có kiến trúc độc đáo
 
-- intent: placeTravel_park
-  examples: |
-    - Công viên
-    - Tôi muốn tìm những công viên
-    - Tôi muốn tìm những công viên nổi tiếng
-    - Tôi muốn tìm nơi vui chơi cho trẻ nhỏ
-    - Tôi muốn nơi yên tĩnh để đi bộ
-
 - intent: placeTravel_pool
   examples: |
     - Hồ bơi 
     - Tôi muốn tìm hồ bơi 
     - Tôi muốn tìm hồ bơi nổi tiếng
     - Tôi muốn tìm nơi thoáng mát để nghỉ dưỡng
-
-- intent: placeTravel_church
-  examples: |
-    - Nhà thờ 
-    - Tôi muốn tìm [nhà thờ](type)
-    - Tôi muốn tìm [nhà thờ](type) nổi tiếng
-    - Tôi muốn tìm nơi để đi lễ
-
-- intent: placeTravel_pagoda
-  examples: |
-    - Chùa
-    - Ngôi chùa 
-    - Tôi muốn tìm những [ngôi chùa](type)
-    - Tôi muốn tìm những ngôi chùa nổi tiếng
-    - Tôi muốn tìm nơi có các nhà sư
-    - Tôi muốn tìm nơi để cúng bái
-    - Tôi muốn tìm nơi để cầu chúc phúc
-    - Tôi muốn tìm nơi để cầu duyên
-    - Tôi muốn đi tu
-
-- intent: placeTravel_beautySpot
-  examples: |
-    - Danh lam thắng cảnh
-    - Tôi muốn tìm địa điểm danh lam thắng cảnh
-    - Tôi muốn tìm những nơi có view đẹp
-    - Tôi muốn tìm nơi thắng cảnh nổi tiếng
-    - Tôi muốn tìm địa điểm có view đẹp
-    - Tôi muốn tìm địa điểm để sống ảo
-    - tôi muốn tìm địa điểm để selfie
     
 - intent: placeTravel_topTravelDestination
   examples: |
@@ -94,6 +50,11 @@ nlu:
     - top [1](number) địa chỉ nổi tiếng
     - top [3](number) địa chỉ nổi tiếng
     - top [7](number) địa chỉ nổi tiếng
+    - Địa điểm du lịch
+    - top [10](number) địa điểm nổi tiếng
+    - top [1](number) địa điểm nổi tiếng
+    - top [3](number) địa điểm nổi tiếng
+    - top [7](number) địa điểm nổi tiếng
     - Địa chỉ du lịch
     - Tìm địa điểm nổi tiếng
     - Tôi muốn tìm địa điểm nổi tiếng
@@ -109,3 +70,56 @@ nlu:
     - ở sài gòn nên đi chỗ nào
     - hãy chỉ cho tui 1 chỗ vui vui
 
+- intent: placeTravel_type
+  examples: |
+    - Top 10 ngôi [chùa](typeTravel)
+    - Những nơi đi [shopping](typeTravel)
+    - Những nơi [danh lam thắng cảnh](typeTravel)
+    - Top 10 [danh lam thắng cảnh](typeTravel)
+    - Top 10 [chợ](typeTravel)
+    - Top 10 [shopping](typeTravel)
+    - [khu chợ](typeTravel) 
+    - [Chùa](typeTravel)
+    - [Cầu tài lộc](typeTravel)
+    - [Chua cau con](typeTravel)
+    - [Chùa cầu con](typeTravel)
+    - [Ngôi chùa](typeTravel) 
+    - Tôi muốn tìm [ngôi chùa](typeTravel)
+    - Tôi muốn tìm những [ngôi chùa](typeTravel)
+    - Tôi muốn tìm những [ngôi chùa](typeTravel) nổi tiếng
+    - Tôi muốn tìm nơi có các [nhà sư](typeTravel)
+    - Tôi muốn tìm nơi để [cúng bái](typeTravel)
+    - Tôi muốn tìm nơi để cầu [chúc phúc](typeTravel)
+    - Tôi muốn tìm nơi để [cầu duyên](typeTravel)
+    - Tôi muốn [đi tu](typeTravel)
+    - [Trung tâm trương mại] (typeTravel)
+    - Tôi muốn tìm các [trung tâm trương mại](typeTravel)
+    - Tôi muốn tìm các [trung tâm trương mại](typeTravel) nổi tiếng
+    - Tôi muốn tìm những [địa điểm mua sắm](typeTravel)
+    - Cho tôi biết những [trung tâm thương mại](typeTravel) nổi tiếng ở sài gòn ?
+    - Cho tôi biết nơi [mua sắm](typeTravel) tốt ở sài gòn ?
+    - [Danh lam thắng cảnh](typeTravel)
+    - Tôi muốn tìm địa điểm [danh lam thắng cảnh](typeTravel)
+    - Tôi muốn tìm những nơi có [view đẹp](typeTravel)
+    - Tôi muốn tìm nơi [thắng cảnh](typeTravel) nổi tiếng
+    - Tôi muốn tìm địa điểm có [view đẹp](typeTravel)
+    - Tôi muốn tìm địa điểm để [sống ảo](typeTravel)
+    - tôi muốn tìm địa điểm để [selfie](typeTravel)
+
+    - [Công viên](typeTravel)
+    - Tôi muốn tìm những [công viên](typeTravel)
+    - Tôi muốn tìm những [công viên](typeTravel) nổi tiếng
+    - Tôi muốn tìm nơi [vui chơi](typeTravel) cho trẻ nhỏ
+    - Tôi muốn nơi [yên tĩnh](typeTravel) để đi bộ
+
+    - [Nhà thờ](typeTravel)
+    - Tôi muốn tìm [nhà thờ](typeTravel)
+    - Tôi muốn tìm [nhà thờ](typeTravel) nổi tiếng
+    - Tôi muốn tìm nơi để [đi lễ](typeTravel)
+
+    - Địa điểm [giải trí](typeTravel)
+    - Top địa điểm [vui chơi](typeTravel)
+    - Tôi muốn tìm địa điểm để [giải trí](typeTravel)
+    - Top những nơi để [chơi](typeTravel)
+    - Những địa điểm vui [chơi](typeTravel)
+    

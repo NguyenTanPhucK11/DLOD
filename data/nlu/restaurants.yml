@@ -1,0 +1,56 @@
+version: "2.0"
+
+nlu:
+- intent: restaurants
+  examples: |
+    - ẩm thực
+    - quán ăn ngon
+    - ẩm thực nổi tiếng
+    - quán ăn nổi bật
+    - nhà hàng gần đây
+    - ẩm thực ngon nhất
+    - các món ăn ngon
+    - cho tôi biết những nơi ăn uống ngon
+    - top nhà hàng nổi bật
+    - top địa điểm ăn uống
+    - top ẩm thực sài gòn
+
+- intent: restaurants_type
+  examples: |
+    - [lẩu](type_res) ngon
+    - [phở](type_res) ngon
+    - [bún](type_res) ngon
+    - những quán [lẩu](type_res) ngon
+    - những quán [ốc](type_res) ngon
+    - quán [lẩu](type_res) nổi tiếng
+    - quán [cơm](type_res) ngon
+    - những quán [bún](type_res) nổi tiếng
+    - [phở](type_res) sài gòn
+    - [phở](type_res) tp hồ chí minh
+    - những quán [phở](type_res) nổi tiếng
+    - tôi muốn ăn [bún](type_res)
+    - tôi thèm [lẩu](type_res)
+    - tôi muốn ăn [lẩu cá](type_res)
+
+- intent: restaurants_district
+  examples: |
+    - quán ăn [quận 7](res_district)
+    - ẩm thực [quận 3](res_district)
+    - quán ngon [quận 2](res_district)
+    - những quán ăn [quận 2](res_district)
+    - những khu ẩm thực [quận 1](res_district)
+    - quán ngon [q8](res_district)
+    - món ăn ngon [q5](res_district)
+    - món ngon thủ đ[ức](res_district)
+    - quán ăn ngon [q7](res_district)
+    - quán ăn ngon [q1](res_district)
+    - quán ăn ngon [q2](res_district)
+    - quán ăn ngon [q3](res_district)
+    - quán ăn ngon [q4](res_district)
+    - quán ăn ngon [q5](res_district)
+    - quán ăn ngon [q11](res_district)
+    - quán ăn ngon [q8](res_district)
+    - ẩm thực [q1](res_district)
+    - ẩm thực [quận 1](res_district)
+    - ẩm thực ngon [q4](res_district)
+    - ẩm thực [q5](res_district)

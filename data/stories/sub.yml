@@ -2,58 +2,38 @@ version: "2.0"
 
 stories:
 
-- story: event
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: event
-  - action: utter_event
-
-- story: souvenir
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: souvenir
-  - action: utter_souvenir
-
 - story: selfie
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_hello
   - intent: selfie
   - action: utter_selfie
 
 - story: prepare necessary
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_hello
   - intent: prepareNecessary
   - action: utter_prepareNecessary
 
 - story: identification
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_hello
   - intent: identification
   - action: utter_identification
 
 # - story: weather
 #   steps:
 #   - intent: greet
-#   - action: utter_greet
+#   - action: action_hello
 #   - intent: weather
 #   - action: utter_weather
 
 - story: climate
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_hello
   - intent: climate
   - action: utter_climate
 
-- story: api 
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: placeTravel_topTravelDestination
-  - action: action_api

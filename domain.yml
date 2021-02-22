@@ -10,6 +10,7 @@ intents:
   - bot_challenge
   - helloworld
   - give_name
+  - choose_type
 # Place Travel
   - placeTravel_shoppingMall
   - placeTravel_historyMuseum
@@ -22,42 +23,76 @@ intents:
   - placeTravel_pagoda
   - placeTravel_beautySpot
   - placeTravel_topTravelDestination
+  - placeTravel_type
 # sub
-  - event
-  - souvenir
   - selfie
   - prepareNecessary
   - identification
   - climate
   - api
  # faq
+  - faq
   - area
   - founding
   - resident
   - language
   - culture
   - vehicle
+  - vehicle_detail
+  - vehicleInSG
+  - vehicleToSG
+  - motorcycle
+  - train
+  - plane
+  - coach
+  - taxi
+  - bus
+  - event
+  - souvenir
+  - time
+  - note
+  - skin
+  - tour
 
  # weather 
   - weather
   - weather_city
+  - weather_city_forecasts
   - city
+  - weather_city_forecasts_day
 
  # location
   - coordinates
  # hotels
   - hotels
+  - hotels_star
+  - hotels_min
+  - hotels_max
+  - hotels_min_price
+  - hotels_max_price
+  - hotels_find_district
+
+  # restaurants
+  - restaurants
+  - restaurants_type
+  - restaurants_district
+  
 
 
 entities:
   - location
   - name
   - surname
-  - type
+  - typeTravel
   - number
   - star
   - min
   - max
+  - price
+  - district
+  - type_res
+  - res_district
+  - num_forecasts_day
   
 slots:
  cust_sex:
@@ -73,7 +108,7 @@ slots:
   type: text
  surname:
   type: text
- type:
+ typeTravel:
   type: text
  number:
   type: text
@@ -83,10 +118,20 @@ slots:
   type: text
  max: 
   type: text
+ price: 
+  type: text
+ district:
+  type: text
+ type_res:
+  type: text
+ res_district:
+  type: text
+ num_forecasts_day:
+  type: text
 
 responses:
   utter_greet:
-  - text: "Chào mừng bạn đến với Check in Sài Gòn, mình có thể giúp gì được cho bạn ?"
+  - text: "Chào mừng bạn đến với Du Lịch Ở Đâu, mình có thể giúp gì được cho bạn ?"
   # - text: "Xin chào {surname} {name}"
 
   utter_cheer_up:
@@ -104,9 +149,6 @@ responses:
 
   utter_iamabot:
   - text: "Tôi là bot, được cung cấp bởi Rasa!"
-
-  utter_greet_with_name:
-  - text: "Kính chào {cust_sex} {cust_name}. Du Lịch Ở Đâu có thể giúp gì được cho bạn ạ?"
 
   # Place Travel
 
@@ -143,25 +185,14 @@ responses:
   utter_placeTravel_pool:
   - text: "Dưới đây là những hồ bơi nổi tiếng ở TP.Hồ Chí Minh"
 
-  utter_placeTravel_church:
-  - text: "Dưới đây là những nhà thờ nổi tiếng ở TP.Hồ Chí Minh"
-
-  utter_placeTravel_pagoda:
-  - text: "Dưới đây là những ngôi chùa nổi tiếng ở TP.Hồ Chí Minh"
-
-  utter_placeTravel_beautySpot:
-  - text: "Dưới đây là những danh lam thắng cảnh nổi tiếng ở TP.Hồ Chí Minh"
-
-  utter_placeTravel_topTravelDestination:
-  - text: "Dưới đây là những địa điểm du dịch nổi bật nhất ở TP.Hồ Chí Minh"
-
   # sub
   
   utter_event:
   - text: "Sắp tới vào tháng 2 sẽ diễn ra lễ hội"
 
-  utter_souvenir:
-  - text: "Hiện tại TORORO là sản phẩm đang được bán chạy nhất. Bạn có thể xem thêm qua [link sau](https://top10tphcm.com/top-shop-qua-luu-niem-chat-luong-nhat-o-tphcm)"
+  utter_time:
+  - text: "Thành phố Hồ Chí Minh (hay vẫn được nhiều người quen gọi là Sài Gòn) là thành phố nằm trong vùng Đông Nam Bộ và gần kề với vùng đồng bằng sông Cửu Long nên có khí hậu phân hóa 2 mùa rõ rệt là mùa khô và mùa mưa. Mùa mưa thường kéo dài trong khoảng thời gian từ tháng 5 đến tháng 11 và mùa khô bắt đầu từ tháng 12 đến tháng 4 năm sau."
+    image: "https://s3-ap-southeast-1.amazonaws.com/mytour-static-file/upload_images/Image/Location/23_7_2016/5/mua-di-du-lich-sai-gon-mytour-1.jpg"
 
   utter_selfie:
   - text: "Hiện tại các quán coffee đang là địa điểm ưa chuộng để chụp ảnh selfie của các bạn trẻ ghé thăm sài gòn. Bạn có thểm tham khảo thêm"
@@ -193,11 +224,33 @@ responses:
   - text: "Sử dụng tiếng việt bình thường nhưng có chất giọng rất khác"
 
   utter_culture:
-  - text: "Cảm nhận đầu tiên của hầu hết mọi du khách khi đến với Sài Gòn hẳn là không khí tấp nập, sự ồn ào, chen chúc nhau của dòng người đông đúc trên đường phố."
-
+  - text: "Cảm nhận đầu tiên của hầu hết mọi du khách khi đến với Sài Gòn hẳn là không khí tấp nập, sự ồn ào, chen chúc nhau của dòng người đông đúc trên đường phố. Người ta cảm thấy ngột ngạt vì không thể thích nghi với khung ảnh này. Dường như ấn tượng ban đầu về Sài Gòn chỉ đơn giản có vậy. Hoa lệ, hoa cho người giàu và lệ cho người nghèo. Song, chẳng biết tự bao giờ, người ta dần thích nghi với điều ấy, lại thấy nhớ nhung cái khung cảnh kẹt xe, tiếng còi, tiếng động cơ hòa vào nhau."
+    image: "https://s3-ap-southeast-1.amazonaws.com/mytour-static-file/upload_images/Image/Location/21_7_2016/25/van-hoa-du-lich-sai-gon-mytour-1.jpg"
   utter_vehicle:
   - text: "Bạn có thể đến Sài gòn bằng rất nhiều phương tiện : Xe khách, máy bay, xe máy, tàu, ..."
 
+  utter_motorcycle:
+  - text: "Có hai hình thức di chuyển bằng xe máy chủ yếu ở Sài Gòn: xe ôm và thuê xe máy tự lái. Khi đi xe ôm, bạn chỉ cần nói địa chỉ và yên tâm ngồi sau những bác xe ôm dễ thương để đến được địa điểm mà mình muốn. Những câu chuyện đời, rất Sài Gòn và rất thực được chia sẻ trên đường đi hẳn sẽ là một trong những kỉ niệm đáng nhớ của bạn trong chuyến du lịch Sài Gòn. Sài Gòn, đôi khi khiến người ta thương vì những điều nhỏ xíu như vậy đấy."
+    image: "https://s3-ap-southeast-1.amazonaws.com/mytour-static-file/upload_images/Image/Location/21_7_2016/23/phuong-tien-du-lich-sai-gon-mytour-10.jpg"
+
+  utter_bus:
+  - text: "Xe buýt là phương tiện công cộng rẻ nhất Sài Gòn. Đến Sài Gòn, một lần trải nghiệm ngồi trên những chuyến xe buýt đi quanh thành phố, ngắm nhìn phố xá đông đúc. Sài Gòn chiều mưa bay lất phất, ngồi bên ô cửa sổ xe buýt nhìn ra, mọi thứ đều nhòe nhoẹt, song đẹp và lãng đãng đến lạ kì. Du lịch Sài Gòn, đừng bỏ qua cơ hội trải nghiệm phương tiện di chuyển thú vị này."
+    image: "https://s3-ap-southeast-1.amazonaws.com/mytour-static-file/upload_images/Image/Location/21_7_2016/24/phuong-tien-du-lich-sai-gon-mytour-11.jpg"
+
+  utter_plane:
+  - text: "Hiện nay có nhiều sự lựa chọn để du khách có thể đến được với thành phố này. Sài Gòn có đủ mọi loại hình du khách đến thăm, và cũng chính vì thế nơi đây cũng đa dạng về cách di chuyển của du khách. Nếu muốn tiết kiệm thời gian, du khách có thể lựa chọn đến Sài Gòn bằng máy bay"
+    image: "https://s3-ap-southeast-1.amazonaws.com/mytour-static-file/upload_images/Image/Location/21_7_2016/23/phuong-tien-du-lich-sai-gon-mytour-2.jpg"
+
+  utter_train:
+  - text: "Nếu bạn không ngại một chuyến đi du lịch không sướng cũng không khổ và mất hơi nhiều thời gian, nhưng vẫn ẩn chứa những điều thú vị, thì ngại ngần gì nữa mà không lựa chọn tàu hỏa hay xe khách. Bon bon trên những con đường, ngắm nhìn khung cảnh làng quê hiện ra trước mắt, cùng bạn bè tâm sự hay trò chuyện cùng với người lạ, sẽ là những trải nghiệm thú vị khi du lịch đến Sài Gòn bằng xe khách hay tàu hỏa."
+    image: "https://s3-ap-southeast-1.amazonaws.com/mytour-static-file/upload_images/Image/Location/21_7_2016/23/phuong-tien-du-lich-sai-gon-mytour-3.jpg"
+  utter_taxi:
+  - text: "Taxi hẳn sẽ là lựa chọn hàng đầu khi du lịch đến bất cứ nơi đâu. Vừa tránh được nắng nóng gay gắt, lại có thể di chuyển một cách nhanh chóng, đi được nhiều người và tương đối an toàn so với những phương tiện di chuyển khác. Hiện nay, có thêm dịch vụ book chuyến đi bằng Grab hay Uber, nhanh chóng và tiết kiệm. Di chuyển bằng xe taxi, du khách có thể tận hưởng Sài Gòn theo một cách rất riêng."
+    image: "https://s3-ap-southeast-1.amazonaws.com/mytour-static-file/upload_images/Image/Location/21_7_2016/23/phuong-tien-du-lich-sai-gon-mytour-6.jpg"
+
+  utter_coach:
+  - text: "Nếu bạn không ngại một chuyến đi du lịch không sướng cũng không khổ và mất hơi nhiều thời gian, nhưng vẫn ẩn chứa những điều thú vị, thì ngại ngần gì nữa mà không lựa chọn tàu hỏa hay xe khách. Bon bon trên những con đường, ngắm nhìn khung cảnh làng quê hiện ra trước mắt, cùng bạn bè tâm sự hay trò chuyện cùng với người lạ, sẽ là những trải nghiệm thú vị khi du lịch đến Sài Gòn bằng xe khách hay tàu hỏa."
+    image: "https://cdn.luatvietnam.vn/uploaded/Images/Original/2020/04/17/xe-khach-lien-tinh_1704080254.jpg"
   # weather
   utter_ask_location:
   - text: "Bạn muốn biết tại quận nào ?"
@@ -208,11 +261,32 @@ session_config:
 
 actions: 
   - action_hello_world
-  - utter_greet_with_name
   - action_get_weather
-  - action_api
+  - action_placeTravel
   - action_name
   - action_transport
   - action_coordinates
   - action_hotels
+  - action_hotels_star
+  - action_hotels_min
+  - action_hotels_max
+  - action_hotels_min_price
+  - action_hotels_max_price
   - action_get_weather_forecasts
+  - action_placeTravel_type
+  - action_hotels_find_district
+  - action_restaurants
+  - action_restaurants_type
+  - action_restaurants_district
+  - action_get_weather_forecasts_day
+  - action_hello
+  - action_choose_type
+  - action_faq
+  - action_vehicle_detail
+  - action_transport_inSG
+  - action_time
+  - action_souvenir
+  - action_event
+  - action_tour
+  - action_note
+  - action_skin

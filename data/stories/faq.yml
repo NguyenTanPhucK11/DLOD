@@ -30,4 +30,86 @@ stories:
 - story: vehicle
   steps:
   - intent: vehicle
+  - action: action_vehicle_detail
+
+- story: vehicle
+  steps:
+  - intent: vehicleToSG
   - action: action_transport
+
+- story: bus
+  steps:
+  - intent: bus
+  - action: utter_bus
+
+- story: taxi
+  steps:
+  - intent: taxi
+  - action: utter_taxi
+
+- story: train
+  steps:
+  - intent: train
+  - action: utter_train
+
+- story: coach
+  steps:
+  - intent: coach
+  - action: utter_coach
+
+- story: plane
+  steps:
+  - intent: plane
+  - action: utter_plane
+
+- story: motorcycle
+  steps:
+  - intent: motorcycle
+  - action: utter_motorcycle
+
+- story: vehicleInSG
+  steps:
+  - intent: vehicleInSG
+  - action: action_transport_inSG
+
+- story: souvenir
+  steps:
+  - intent: souvenir
+  - action: action_souvenir
+
+- story: time
+  steps:
+  - intent: time
+  - action: utter_time
+
+- story: note
+  steps:
+  - intent: note
+  - action: action_note
+
+- story: skin
+  steps:
+  - intent: skin
+  - action: action_skin
+
+- story: event
+  steps:
+  - intent: event
+  - action: action_event
+
+- story: faq
+  steps:
+  - intent: faq
+  - action: action_faq
+
+- story: faq
+  steps:
+  - intent: greet
+  - action: action_hello
+  - intent: faq
+  - action: action_faq
+
+- story: tour
+  steps:
+  - intent: tour
+  - action: action_tour

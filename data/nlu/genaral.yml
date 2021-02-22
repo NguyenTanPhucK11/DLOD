@@ -4,6 +4,14 @@ nlu:
 - intent: greet
   examples: |
     - chào
+    - chài
+    - hello
+    - Hi
+    - chao
+    - chaof
+    - xin chaof
+    - xin chao
+    - xin chai
     - hey bạn
     - đi thôi nào
     - chào bạn
@@ -90,5 +98,7 @@ nlu:
     - do you want hello world
 
 # Place Travel    
-
+- intent: choose_type
+  examples: |
+    - Hoạt động phổ biến
    

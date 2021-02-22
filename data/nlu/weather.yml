@@ -22,9 +22,26 @@ nlu:
     - tôi muốn biết nhiệt độ tại [Binh Tan](location)
 - intent: weather_city_forecasts
   examples: |
-    - nhiệt độ ngày mai
-    - ngày mai thời tiết ra sao
-    - thời tiết ngày mai
+    - nhiệt độ sài gòn ngày mai
+    - ngày mai thời tiết tp hồ chí minh ra sao
+    - thời tiết sài gòn ngày mai
+
+- intent: weather_city_forecasts_day
+  examples: |
+    - nhiệt độ [3](num_forecasts_day) sài gòn ngày tới
+    - thời tiết [3](num_forecasts_day) ngày tới
+    - thời tiết [3](num_forecasts_day) ngày nữa
+    - [3](num_forecasts_day) ngày nữa sài gòn có mưa không
+    - [3](num_forecasts_day) ngày sau có nắng không
+    - nhiệt độ [7](num_forecasts_day) ngày tới
+    - nhiệt độ [7](num_forecasts_day) ngày nữa
+    - thời tiết [7](num_forecasts_day) ngày tới
+    - thời tiết [7](num_forecasts_day) ngày nữa
+    - [7](num_forecasts_day) ngày nữa có mưa không
+    - [7](num_forecasts_day) ngày sau có nắng không
+    - thời tiết [7](num_forecasts_day) ngày tiếp theo
+    - thời tiết [3](num_forecasts_day) ngày tiếp theo
+
 - intent: city
   examples: |
     - [Binh Tan](location)

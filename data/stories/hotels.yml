@@ -2,13 +2,78 @@ version: "2.0"
 
 stories:
 
+# - story: hotels
+#   steps:
+#   - intent: hotels
+#   - action: action_hotels
+
 - story: hotels & homestays
   steps:
   - intent: hotels
+  - action: action_hotels
+
+- story: hotels & homestays
+  steps:
+  - intent: hotels_star
     entities:
     - star: 3
   - slot_was_set:
     - star: 5
-  - action: action_hotels
+  - action: action_hotels_star
   - slot_was_set:
     - star: null
+
+- story: hotels min
+  steps:
+  - intent: hotels_min
+    entities:
+    - min: rẻ nhất
+  - slot_was_set:
+    - min: giá rẻ
+  - action: action_hotels_min
+  - slot_was_set:
+    - min: null
+
+- story: hotels max
+  steps:
+  - intent: hotels_max
+    entities:
+    - max: cao nhất
+  - slot_was_set:
+    - max: giá cao
+  - action: action_hotels_max
+  - slot_was_set:
+    - max: null
+
+- story: hotels min price
+  steps:
+  - intent: hotels_min_price
+    entities:
+    - price: 800000
+  - slot_was_set:
+    - price: 1000000  
+  - action: action_hotels_min_price
+  - slot_was_set:
+    - price: null
+
+- story: hotels max price
+  steps:
+  - intent: hotels_max_price
+    entities:
+    - price: 800000
+  - slot_was_set:
+    - price: 1000000  
+  - action: action_hotels_max_price
+  - slot_was_set:
+    - price: null
+
+- story: hotels find district
+  steps:
+  - intent: hotels_find_district
+    entities:
+    - district: quận 5
+  - slot_was_set:
+    - district: quận thủ đức  
+  - action: action_hotels_find_district
+  - slot_was_set:
+    - district: null

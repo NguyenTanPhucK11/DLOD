@@ -35,5 +35,85 @@ nlu:
   examples: |
     - Phương tiện ?
     - Tôi có thể đến Sài gòn bằng cách nào ?
-    - Tôi có thể đi (xe máy)[vehicle] đến sài gòn không ?
-    - Làm cách nào để đến xài gòn ?
+    - Tôi có thể đi xe máy đến sài gòn không ?
+    - Làm cách nào để đến sài gòn ?
+
+- intent: vehicleToSG
+  examples: |
+    - Đi bằng gì tới sài gòn ?
+
+- intent: vehicleInSG
+  examples: |
+    - Tới sài gòn di chuyển thế nào ?
+
+- intent: plane
+  examples: |
+    - Máy bay ?
+
+- intent: train
+  examples: |
+    - Tàu 
+    - Tàu hoả
+
+- intent: coach
+  examples: |
+    - Xe khách
+    - Xe đò
+
+- intent: taxi
+  examples: |
+    - Taxi
+
+- intent: motorcycle
+  examples: |
+    - Xe máy
+
+- intent: bus
+  examples: |
+    - Xe buýt
+    - Xe bus
+
+- intent: souvenir
+  examples: |
+    - Quà lưu niệm ?
+    - Tôi mua quà lưu niệm ở đâu ?
+    - Tôi muốn mua quà về tặng người thân
+    - Tôi muốn mua quà lưu niệm
+    - Quà lưu niệm nào ở sài gòn được yêu thích
+    - Quà lưu niệm thường được mua
+    - Những món quà lưu niệm được ưa chuộng nhất
+
+- intent: time
+  examples: |
+    - Đi lúc nào ?
+    - Tôi có thể đến Sài gòn vào thời điểm nào ?
+  
+- intent: note
+  examples: |
+    - Lưu ý? 
+    - Những điều cần lưu ý khi đến sài gòn?
+    - Nhiều điều hạn chế khi đến Sài gòn ?
+
+- intent: skin
+  examples: |
+    - Trang phục ?
+    - Mặc gì ?
+    - Mặc gì ở Sài Gòn ?
+    - Ở sài gòn trang phục ra sao ?
+
+- intent: event
+  examples: |
+    - Sự kiện
+    - Gần đây có sự kiện gì không ?
+    - Sài gòn có sự kiện gì đặc sắc ?
+    - Cho tôi biết những sự kiện nổi bật
+
+- intent: faq
+  examples: |
+    - Hỏi đáp
+
+- intent: tour
+  examples: |
+    - Tour du lịch
+    - Team du lịch
+    

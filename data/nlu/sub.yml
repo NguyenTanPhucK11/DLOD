@@ -1,21 +1,6 @@
 version: "2.0"
 
 nlu:
-- intent: event
-  examples: |
-    - Sự kiện
-    - Gần đây có sự kiện gì không ?
-    - Sài gòn có sự kiện gì đặc sắc ?
-    - Cho tôi biết những sự kiện nổi bật
-
-- intent: souvenir
-  examples: |
-    - Quà lưu niệm
-    - Tôi muốn mua quà về tặng người thân
-    - Tôi muốn mua quà lưu niệm
-    - Quà lưu niệm nào ở sài gòn được yêu thích
-    - Quà lưu niệm thường được mua
-    - Những món quà lưu niệm được ưa chuộng nhất
 
 - intent: selfie
   examples: |
